@@ -123,14 +123,16 @@ const WhyHireMe = () => {
                 onClick={() => setActiveService(s.id)}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
-                className={`flex items-center gap-2 px-5 py-3 rounded-2xl font-semibold text-sm transition-all duration-300 border ${
+                className={`flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl font-semibold text-xs sm:text-sm transition-all duration-300 border ${
                   activeService === s.id
                     ? `${c.bg} ${c.border} ${c.text} shadow-lg`
                     : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:bg-white/8'
                 }`}
               >
-                <span className={activeService === s.id ? c.text : 'text-slate-500'}>{s.icon}</span>
-                <span className="hidden sm:inline">{s.title}</span>
+                <span className={activeService === s.id ? c.text : 'text-slate-500'}>
+                  {React.cloneElement(s.icon, { size: 20 })}
+                </span>
+                <span className="inline">{s.title}</span>
               </motion.button>
             );
           })}
@@ -148,7 +150,7 @@ const WhyHireMe = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-5">
               {/* Left: Description */}
-              <div className={`lg:col-span-2 p-8 md:p-10 bg-gradient-to-br ${cs.bg} to-transparent`}>
+              <div className={`lg:col-span-2 p-6 sm:p-10 bg-gradient-to-br ${cs.bg} to-transparent border-b lg:border-b-0 lg:border-r border-white/5`}>
                 <div className={`inline-flex p-4 rounded-3xl ${cs.bg} border ${cs.border} mb-6 ${cs.text}`}>
                   {active.icon}
                 </div>
@@ -168,7 +170,7 @@ const WhyHireMe = () => {
               </div>
 
               {/* Right: Deliverables */}
-              <div className="lg:col-span-3 p-8 md:p-10 flex flex-col">
+              <div className="lg:col-span-3 p-6 sm:p-10 flex flex-col">
                 <h4 className="text-xl font-display font-bold text-white mb-8 flex items-center gap-2">
                   <CheckCircle size={20} className="text-emerald-400" />
                   What You'll Get

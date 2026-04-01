@@ -69,7 +69,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-10 md:p-14 max-w-4xl w-full border-white/10 hover:border-sky-500/20 transition-colors shadow-2xl shadow-sky-500/5 rotate-1"
+            className="glass-card p-6 sm:p-10 md:p-14 max-w-4xl w-full border-white/10 hover:border-sky-500/20 transition-colors shadow-2xl shadow-sky-500/5 sm:rotate-1"
           >
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
               <div className="text-center md:text-left flex-1">
@@ -87,7 +87,7 @@ const Footer = () => {
                 
                 {/* Hero-Matched Action Buttons */}
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                  <a href="https://www.linkedin.com/in/rohit-kumar-singh-25168a226/" target="_blank" rel="noopener noreferrer" className="btn-gradient px-8 py-4">
+                  <a href="https://www.linkedin.com/in/rohit-kumar-singh-25168a226/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto btn-gradient px-8 py-4 flex justify-center items-center">
                     Get in Touch
                     <ArrowUpRight className="ml-2" size={18} />
                   </a>

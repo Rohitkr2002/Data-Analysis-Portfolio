@@ -162,15 +162,15 @@ const SkillsExperience = () => {
                     key={item.title}
                     initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.2 }}
-                    className="relative flex gap-6 group"
+                    className="relative flex gap-4 sm:gap-6 group"
                   >
                     {/* Icon node */}
-                    <div className={`relative z-10 flex-shrink-0 h-16 w-16 border-2 ${item.iconBg} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`relative z-10 flex-shrink-0 h-12 w-12 sm:h-16 sm:w-16 border-2 ${item.iconBg} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       {item.icon}
                     </div>
 
                     {/* Content */}
-                    <div className="flex-1 glass-card p-6 border-white/5 hover:border-white/15 transition-all">
+                    <div className="flex-1 glass-card p-5 sm:p-6 border-white/5 hover:border-white/15 transition-all">
                       <div className="flex flex-wrap items-center gap-2 mb-2">
                         <span className="text-xs font-black text-sky-400 tracking-[0.2em] uppercase">{item.period}</span>
                         <span className="text-xs bg-white/5 border border-white/10 px-2 py-0.5 rounded-full text-slate-400">{item.type}</span>

@@ -124,9 +124,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             className="lg:col-span-2 space-y-6"
           >
-            <div className="glass-card p-8 border-white/5 h-full flex flex-col justify-between">
+            <div className="glass-card p-6 sm:p-8 border-white/5 h-full flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-display font-black text-white mb-4">
+                <h3 className="text-xl sm:text-2xl font-display font-black text-white mb-4">
                   Ready to <span className="text-transparent-gradient">Collaborate?</span>
                 </h3>
                 <p className="text-slate-400 leading-relaxed mb-8 text-sm">
@@ -165,7 +165,7 @@ const Contact = () => {
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-            className="lg:col-span-3 glass-card p-8 md:p-10 border-white/5"
+            className="lg:col-span-3 glass-card p-6 sm:p-8 md:p-10 border-white/5"
           >
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12">

@@ -33,19 +33,19 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 px-6;
+    @apply py-20 md:py-32 px-4 sm:px-6;
   }
 
   .btn-gradient {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 rounded-2xl bg-gradient-to-br from-sky-400 via-indigo-500 to-purple-600 hover:scale-[1.02] active:scale-95 shadow-xl shadow-sky-500/20 active:shadow-none;
+    @apply relative inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 font-bold text-white transition-all duration-300 rounded-2xl bg-gradient-to-br from-sky-400 via-indigo-500 to-purple-600 hover:scale-[1.02] active:scale-95 shadow-xl shadow-sky-500/20 active:shadow-none;
   }
 
   .bento-inner {
-    @apply p-8 flex flex-col h-full;
+    @apply p-6 sm:p-8 flex flex-col h-full;
   }
 
   .heading-xl {
-    @apply font-display text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-white;
+    @apply font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] text-white;
   }
 
   .text-transparent-gradient {

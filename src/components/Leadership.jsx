@@ -84,7 +84,7 @@ const Leadership = () => {
               whileHover={{ y: -5 }}
               className={`glass-card group relative overflow-hidden ${item.className} ${item.borderColor} hover:bg-white/[0.05] transition-all duration-300`}
             >
-              <div className={`bento-inner h-full flex flex-col p-7 bg-gradient-to-br ${item.gradient}`}>
+              <div className={`bento-inner h-full flex flex-col p-6 sm:p-7 bg-gradient-to-br ${item.gradient}`}>
                 <div className="flex justify-between items-start mb-6">
                   <div className="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:scale-105 transition-transform duration-300">
                     {item.icon}

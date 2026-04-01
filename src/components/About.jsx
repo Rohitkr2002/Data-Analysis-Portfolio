@@ -51,7 +51,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="glass-card p-8 border-white/5 bg-white/[0.02]"
+              className="glass-card p-6 sm:p-8 border-white/5 bg-white/[0.02]"
             >
               <div className="flex items-center gap-6 mb-8">
                 <div className="relative group">
@@ -109,7 +109,7 @@ const About = () => {
                   transition={{ delay: i * 0.1 }}
                   className="glass-card hover:bg-white/[0.04] group border-white/5 overflow-hidden"
                 >
-                   <div className={`bento-inner flex flex-col md:flex-row md:items-center gap-6 bg-gradient-to-br ${item.gradient}`}>
+                  <div className={`bento-inner flex flex-col sm:flex-row sm:items-center gap-6 bg-gradient-to-br ${item.gradient} p-6 sm:p-8`}>
                       <div className="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:scale-110 transition-transform duration-300 shrink-0 h-fit">
                         {item.icon}
                       </div>

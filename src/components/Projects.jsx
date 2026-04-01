@@ -102,7 +102,7 @@ const Projects = () => {
           transition={{ duration: 0.7 }}
           className={`glass-card mb-8 overflow-hidden ${featured.border}`}
         >
-          <div className={`bg-gradient-to-br ${featured.gradient} p-8 md:p-12`}>
+          <div className={`bg-gradient-to-br ${featured.gradient} p-6 sm:p-10 md:p-12`}>
             <div className="flex flex-col lg:flex-row gap-10 items-start">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-6">
