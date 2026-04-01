@@ -47,12 +47,12 @@ const Hero = () => {
         </motion.div>
       ))}
 
-      {/* Left Social Sidebar (Desktop Only) */}
+      {/* Left Social Sidebar (Desktop-Premium Only) */}
       <motion.div 
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="fixed left-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
+        className="fixed left-6 top-1/2 -translate-y-1/2 hidden 2xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
       >
         <a href="https://www.linkedin.com/in/rohit-kumar-singh-25168a226/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors p-2 hover:bg-sky-400/10 rounded-full">
            <Linkedin size={20} />
@@ -89,12 +89,12 @@ const Hero = () => {
           </motion.p>
 
           {/* Name & Title */}
-          <h1 className="text-4xl md:text-7xl font-display font-black tracking-tighter mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black tracking-tighter mb-4">
             <span className="text-white drop-shadow-2xl">Rohit Kumar</span><br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-500 animate-gradient-x">Singh</span>
           </h1>
 
-          <h2 className="text-2xl md:text-4xl font-display font-bold mb-6 text-slate-200">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-6 text-slate-200">
             Professional <span className="text-transparent-gradient">{text}</span>
             <Cursor cursorStyle='|' cursorColor='#38bdf8' />
           </h2>
@@ -142,15 +142,15 @@ const Hero = () => {
              initial={{ opacity: 0, scale: 0.9 }}
              animate={{ opacity: 1, scale: 1 }}
              transition={{ duration: 0.6, delay: 0.6 }}
-             className="flex flex-wrap items-center gap-5"
+             className="flex flex-col sm:flex-row items-start sm:items-center gap-5"
           >
-            <a href="#projects" className="btn-gradient px-8 py-5 group text-lg">
+            <a href="#projects" className="w-full sm:w-auto btn-gradient px-8 py-5 group text-lg flex justify-center items-center">
               Launch Portfolio
               <MoveRight className="ml-3 group-hover:translate-x-1 transition-transform" size={22} />
             </a>
             <a 
               href="#" 
-              className="inline-flex items-center gap-3 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 hover:border-sky-400/50 hover:bg-sky-500/10 text-white font-bold transition-all shadow-xl"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 hover:border-sky-400/50 hover:bg-sky-500/10 text-white font-bold transition-all shadow-xl"
             >
               <Download size={20} className="text-sky-400" />
               Resume PDF
@@ -162,7 +162,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-20"
           >
             {stats.map((stat, i) => (
               <div key={i} className="glass-card p-5 border-white/5 hover:border-white/15 transition-all group cursor-default">
@@ -177,8 +177,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right Side Floating Cards (Adjusted vertically to stay higher) */}
-      <div className="absolute top-[35%] right-1 md:right-6 xl:right-10 -translate-y-1/2 hidden lg:flex flex-col gap-8 pointer-events-none z-0">
+      {/* Right Side Floating Cards (Hidden on collision-prone screens) */}
+      <div className="absolute top-[35%] right-1 md:right-6 xl:right-10 -translate-y-1/2 hidden 2xl:flex flex-col gap-8 pointer-events-none z-0">
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
