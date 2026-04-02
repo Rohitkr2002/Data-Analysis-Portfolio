@@ -1,8 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Mail, GraduationCap, Briefcase, MapPin, Download, Award, Star, CheckCircle, Code2, BarChart3, Database, Globe } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, GraduationCap, Briefcase, MapPin, Download, Award, Star, CheckCircle, Code2, BarChart3, Database, Globe, X, Eye, ZoomIn } from 'lucide-react';
+
+import googleCert from '../assets/certifications/google_data.png';
+import pythonCert from '../assets/certifications/python_data.png';
+import sqlCert from '../assets/certifications/sql_data.png';
+import reactCert from '../assets/certifications/react_data.png';
 
 const SkillsExperience = () => {
+  const [selectedCert, setSelectedCert] = useState(null);
+
   const skills = [
     { name: 'React.js / JavaScript', level: 90, color: 'from-sky-400 to-blue-500',    icon: '⚛️' },
     { name: 'Python (Pandas, NumPy)', level: 85, color: 'from-indigo-400 to-indigo-600', icon: '🐍' },
@@ -13,10 +20,10 @@ const SkillsExperience = () => {
   ];
 
   const certifications = [
-    { name: 'Google Data Analytics',          org: 'Google / Coursera',      icon: '🎓', color: 'text-sky-400'     },
-    { name: 'Python for Data Science',        org: 'IBM / Coursera',         icon: '🐍', color: 'text-indigo-400'  },
-    { name: 'SQL for Data Analysis',          org: 'Mode Analytics',         icon: '🗄️', color: 'text-purple-400'  },
-    { name: 'React — The Complete Guide',     org: 'Udemy / Maximilian S.',   icon: '⚛️', color: 'text-emerald-400' },
+    { name: 'Google Data Analytics',          org: 'Google / Coursera',      icon: '🎓', color: 'text-sky-400',     image: googleCert },
+    { name: 'Python for Data Science',        org: 'IBM / Coursera',         icon: '🐍', color: 'text-indigo-400',  image: pythonCert },
+    { name: 'SQL for Data Analysis',          org: 'Mode Analytics',         icon: '🗄️', color: 'text-purple-400',  image: sqlCert    },
+    { name: 'React — The Complete Guide',     org: 'Udemy / Maximilian S.',   icon: '⚛️', color: 'text-emerald-400', image: reactCert   },
   ];
 
   const experience = [
@@ -113,15 +120,23 @@ const SkillsExperience = () => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {certifications.map((cert) => (
-                <div key={cert.name} className="glass-card p-5 border-white/5 hover:border-white/15 transition-all group">
+                <motion.div
+                  key={cert.name}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  onClick={() => setSelectedCert(cert)}
+                  className="glass-card p-5 border-white/5 hover:border-sky-500/30 transition-all group cursor-pointer relative overflow-hidden"
+                >
+                  <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ZoomIn size={14} className="text-sky-400" />
+                  </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">{cert.icon}</span>
+                    <span className="text-2xl group-hover:scale-110 transition-transform">{cert.icon}</span>
                     <div>
                       <p className={`text-sm font-bold ${cert.color} mb-1`}>{cert.name}</p>
                       <p className="text-xs text-slate-500">{cert.org}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -210,6 +225,55 @@ const SkillsExperience = () => {
           </div>
         </div>
       </div>
+
+      {/* ── Certification Modal ── */}
+      <AnimatePresence>
+        {selectedCert && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedCert(null)}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-10 bg-dark/90 backdrop-blur-xl cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-5xl w-full glass-card border-white/10 p-2 sm:p-4 overflow-hidden"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="absolute top-4 right-4 z-10 p-2 bg-dark/50 hover:bg-red-500/20 text-white rounded-full transition-colors border border-white/10"
+              >
+                <X size={20} />
+              </button>
+
+              {/* Certificate Header */}
+              <div className="p-4 border-b border-white/5 mb-4">
+                <h4 className="text-xl font-display font-bold text-white">{selectedCert.name}</h4>
+                <p className="text-slate-400 text-sm">{selectedCert.org}</p>
+              </div>
+
+              {/* Image Container */}
+              <div className="relative group rounded-xl overflow-hidden bg-white/5">
+                <img
+                  src={selectedCert.image}
+                  alt={selectedCert.name}
+                  className="w-full h-auto object-contain max-h-[70vh]"
+                />
+              </div>
+
+              {/* Footer / Tip */}
+              <div className="mt-4 text-center">
+                <p className="text-xs text-slate-500 italic">Click outside or press X to close</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
