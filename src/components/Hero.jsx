@@ -52,7 +52,7 @@ const Hero = () => {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="fixed left-4 2xl:left-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
+        className="fixed left-6 2xl:left-12 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
       >
         <a href="https://www.linkedin.com/in/rohit-kumar-singh-25168a226/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors p-2 hover:bg-sky-400/10 rounded-full">
            <Linkedin size={20} />
@@ -63,7 +63,7 @@ const Hero = () => {
         <div className="h-20 w-px bg-gradient-to-b from-sky-400/50 to-transparent mx-auto" />
       </motion.div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         <div className="max-w-4xl">
           {/* Status Badge */}
           <motion.div
@@ -178,7 +178,7 @@ const Hero = () => {
       </div>
 
       {/* Right Side Floating Cards (Restored for Laptops/Desktops) */}
-      <div className="absolute top-[35%] right-2 xl:right-4 2xl:right-10 -translate-y-1/2 hidden xl:flex flex-col gap-8 pointer-events-none z-0">
+      <div className="absolute top-[35%] right-6 xl:right-12 2xl:right-24 -translate-y-1/2 hidden xl:flex flex-col gap-8 pointer-events-none z-0">
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
