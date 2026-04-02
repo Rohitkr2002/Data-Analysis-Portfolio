@@ -27,7 +27,7 @@ const SkillsExperience = () => {
     { name: 'SQL for Data Analysis',          org: 'Mode Analytics',         icon: '🗄️', color: 'text-purple-400',  image: sqlCert    },
     { name: 'React — The Complete Guide',     org: 'Udemy / Maximilian S.',   icon: '⚛️', color: 'text-emerald-400', image: reactCert   },
     { name: 'Power BI Data Visualization',    org: 'Microsoft / Coursera',   icon: '📊', color: 'text-yellow-400',  image: powerbiCert },
-    { name: 'Advanced Excel Analytics',       org: 'PwC / Coursera',         icon: '📋', color: 'text-emerald-400', image: excelCert   },
+    { name: 'Advanced Excel Analytics',       org: 'PwC / Coursera',         icon: '📋', color: 'text-green-500',   image: excelCert   },
   ];
 
   const experience = [
