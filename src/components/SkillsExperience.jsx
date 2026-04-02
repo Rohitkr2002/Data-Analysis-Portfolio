@@ -96,7 +96,7 @@ const SkillsExperience = () => {
             <h3 className="text-xl font-display font-bold text-white mb-8 flex items-center gap-3">
               <Code2 className="text-sky-400" size={22} /> Core Skill Levels
             </h3>
-            <div className="space-y-7 mb-16">
+            <div className="space-y-7 mb-10">
               {skills.map((skill, i) => (
                 <div key={skill.name}>
                   <div className="flex justify-between items-center mb-2">
@@ -122,7 +122,7 @@ const SkillsExperience = () => {
             <h3 className="text-xl font-display font-bold text-white mb-6 flex items-center gap-3">
               <Award className="text-indigo-400" size={22} /> Certifications
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {certifications.map((cert) => (
                 <motion.div
                   key={cert.name}
