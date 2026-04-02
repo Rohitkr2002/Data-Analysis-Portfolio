@@ -15,6 +15,7 @@ const Projects = () => {
     ],
     icon: <Sparkles size={28} className="text-indigo-300" />,
     github: 'https://github.com/Rohitkr2002/Naukri.com-AI-Agent-',
+    demo: '#',
     gradient: 'from-indigo-500/20 via-purple-500/10 to-transparent',
     border: 'border-indigo-500/30',
   };
@@ -28,7 +29,8 @@ const Projects = () => {
       insights: '+30% insight speed via automated cleaning pipelines.',
       icon: <BarChart3 size={22} className="text-sky-400" />,
       color: 'sky',
-      github: 'https://github.com/Rohitkr2002',
+      github: 'https://github.com/Rohitkr2002/FNP-Sales-----Excel-Project',
+      demo: '#',
     },
     {
       title: 'HR Executive Power BI Dashboard',
@@ -39,6 +41,7 @@ const Projects = () => {
       icon: <Layers size={22} className="text-purple-400" />,
       color: 'purple',
       github: 'https://github.com/Rohitkr2002/HR-Dashboard',
+      demo: '#',
     },
     {
       title: 'SQL Retail Analytics Engine',
@@ -48,7 +51,8 @@ const Projects = () => {
       insights: 'Query runtime cut by 45% using smart indexing strategy.',
       icon: <Database size={22} className="text-emerald-400" />,
       color: 'emerald',
-      github: 'https://github.com/Rohitkr2002',
+      github: 'https://github.com/Rohitkr2002/Data-Analysis-Portfolio',
+      demo: '#',
     },
     {
       title: 'Blood Bank Management System',
@@ -57,8 +61,9 @@ const Projects = () => {
       tools: ['HTML', 'CSS', 'JavaScript', 'Chart.js', 'LocalStorage'],
       insights: 'Deployed on GitHub Pages — live recruiter-ready demo.',
       icon: <Code2 size={22} className="text-red-400" />,
-      color: 'red',
       github: 'https://github.com/Rohitkr2002/Blood-Bank-Management-Font-End-Project-',
+      demo: 'https://rohitkr2002.github.io/Blood-Bank-Management-Font-End-Project-/',
+      color: 'red',
     },
   ];
 
@@ -112,7 +117,9 @@ const Projects = () => {
                     <span className="text-xs font-bold text-emerald-400 uppercase tracking-[0.2em]">★ FEATURED PROJECT</span>
                   </div>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-display font-black text-white mb-4">{featured.title}</h3>
+                <a href={featured.github} target="_blank" rel="noopener noreferrer">
+                  <h3 className="text-3xl md:text-4xl font-display font-black text-white mb-4 hover:text-indigo-400 transition-colors uppercase">{featured.title}</h3>
+                </a>
                 <p className="text-slate-300 leading-relaxed mb-8 text-base max-w-2xl">{featured.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {featured.tools.map(t => (
@@ -159,7 +166,8 @@ const Projects = () => {
                         className="p-2 text-slate-500 hover:text-white transition-colors hover:bg-white/5 rounded-lg">
                         <Github size={18} />
                       </a>
-                      <a href="#" className="p-2 text-slate-500 hover:text-white transition-colors hover:bg-white/5 rounded-lg">
+                      <a href={p.demo !== '#' ? p.demo : p.github} target="_blank" rel="noopener noreferrer"
+                        className="p-2 text-slate-500 hover:text-white transition-colors hover:bg-white/5 rounded-lg">
                         <ExternalLink size={18} />
                       </a>
                     </div>
