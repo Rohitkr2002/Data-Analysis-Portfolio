@@ -75,7 +75,7 @@ const Projects = () => {
       <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/5 blur-[140px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-sky-500/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>

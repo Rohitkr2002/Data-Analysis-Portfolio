@@ -58,7 +58,7 @@ const Leadership = () => {
       {/* Background Blurs */}
       <div className="absolute top-1/3 -right-32 w-[400px] h-[400px] bg-sky-500/5 blur-[120px] pointer-events-none rounded-full animate-aurora" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         <div className="mb-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}

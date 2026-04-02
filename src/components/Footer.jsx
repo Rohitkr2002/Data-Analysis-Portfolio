@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="absolute top-0 -left-10 w-96 h-96 bg-sky-500/5 blur-[120px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 -right-10 w-96 h-96 bg-indigo-500/5 blur-[120px] pointer-events-none rounded-full" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         
         {/* ── CENTRAL SIGNATURE PANEL ── */}
         <div className="relative mb-24 flex justify-center">

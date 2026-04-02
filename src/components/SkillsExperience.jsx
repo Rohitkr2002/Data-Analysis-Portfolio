@@ -68,7 +68,7 @@ const SkillsExperience = () => {
     <section id="experience" className="section-padding relative overflow-hidden bg-dark">
       <div className="absolute top-1/3 -left-40 w-96 h-96 bg-purple-500/5 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         {/* Header */}
         <motion.p
           initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}

@@ -52,7 +52,7 @@ const StatsSection = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         <div className="text-center mb-16">
           <h2 className="heading-xl text-white">
             By the <span className="text-transparent-gradient">Numbers</span>
