@@ -90,7 +90,7 @@ const Contact = () => {
 
       <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="text-sky-400 text-xs font-bold uppercase tracking-[0.3em] mb-4"
@@ -107,7 +107,7 @@ const Contact = () => {
         {/* Availability strip */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="flex flex-wrap items-center justify-center gap-6 mb-14 p-5 glass-card border-emerald-500/20 bg-emerald-500/5 max-w-2xl mx-auto"
+          className="flex flex-wrap items-center justify-center gap-6 mb-10 p-5 glass-card border-emerald-500/20 bg-emerald-500/5 max-w-2xl mx-auto"
         >
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 bg-emerald-400 rounded-full animate-pulse" />
@@ -124,7 +124,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {contactCards.map((card, i) => (
             <motion.a
               key={card.label}

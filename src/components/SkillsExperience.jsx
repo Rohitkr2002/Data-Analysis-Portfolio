@@ -86,11 +86,11 @@ const SkillsExperience = () => {
           className="text-sky-400 text-xs font-bold uppercase tracking-[0.3em] mb-4"
         >
         </motion.p>
-        <h2 className="heading-xl text-white mb-16">
+        <h2 className="heading-xl text-white mb-10">
           Technical <span className="text-transparent-gradient">Proficiency</span>
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* ── LEFT: Skills + Certs ── */}
           <div>
             <h3 className="text-xl font-display font-bold text-white mb-8 flex items-center gap-3">

@@ -82,7 +82,7 @@ const Projects = () => {
 
       <div className="container mx-auto px-6 xl:px-32 2xl:px-48 relative z-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -146,7 +146,7 @@ const Projects = () => {
         </motion.div>
 
         {/* ── PROJECT GRID ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {projects.map((p, i) => {
             const c = colorMap[p.color];
             return (
