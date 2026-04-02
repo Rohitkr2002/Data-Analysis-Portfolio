@@ -210,22 +210,6 @@ const SkillsExperience = () => {
               </div>
             </div>
 
-            {/* Resume CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="mt-12 p-1 bg-gradient-to-r from-sky-400 via-indigo-500 to-purple-600 rounded-3xl"
-            >
-              <div className="bg-dark rounded-[22px] p-7 flex flex-col sm:flex-row items-center justify-between gap-5">
-                <div>
-                  <p className="text-xs text-sky-400 font-bold uppercase tracking-widest mb-2">Download CV</p>
-                  <h4 className="text-xl font-display font-black text-white">Full Resume PDF</h4>
-                  <p className="text-slate-400 text-sm mt-1">All projects, experience & skills in one place.</p>
-                </div>
-                <a href="#" className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-white text-dark font-black rounded-2xl hover:scale-105 transition-transform shadow-lg">
-                  <Download size={18} /> GET PDF
-                </a>
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>
