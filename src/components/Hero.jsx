@@ -52,7 +52,7 @@ const Hero = () => {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.8 }}
-        className="fixed left-6 top-1/2 -translate-y-1/2 hidden 2xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
+        className="fixed left-4 2xl:left-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
       >
         <a href="https://www.linkedin.com/in/rohit-kumar-singh-25168a226/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors p-2 hover:bg-sky-400/10 rounded-full">
            <Linkedin size={20} />
@@ -177,8 +177,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right Side Floating Cards (Hidden on collision-prone screens) */}
-      <div className="absolute top-[35%] right-1 md:right-6 xl:right-10 -translate-y-1/2 hidden 2xl:flex flex-col gap-8 pointer-events-none z-0">
+      {/* Right Side Floating Cards (Restored for Laptops/Desktops) */}
+      <div className="absolute top-[35%] right-2 xl:right-4 2xl:right-10 -translate-y-1/2 hidden xl:flex flex-col gap-8 pointer-events-none z-0">
         <motion.div 
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
