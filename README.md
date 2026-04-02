@@ -47,12 +47,12 @@
 - **The Solution**: Built a Python agent using **BeautifulSoup** to scrape Naukri.com, **Gemini AI** to score jobs against my resume, and **SMTP** to email daily curated reports.
 - **The Result**: **10+ hours saved** weekly and a standardized search process.
 
-### 📈 **Sales Data Analysis & Executive Dashboard**
+### 📈 [HR Executive Power BI Dashboard](https://github.com/Rohitkr2002/HR-Dashboard)
 - **Analysis**: Conducted deep EDA on 50,000+ retail rows to uncover seasonal churn patterns.
 - **Visualization**: Built interactive **Power BI** dashboards for C-suite executives, consolidating 10+ Excel sources into 3 unified views.
 - **Impact**: Provided immediate visibility into top-performing SKUs and revenue leaks.
 
-### 🩸 **Blood Bank Management (UI Console)**
+### 🩸 [Blood Bank Management (UI Console)](https://rohitkr2002.github.io/Blood-Bank-Management-Font-End-Project-/)
 - **Innovation**: A glassmorphism-based CRUD app with real-time stock visualization.
 - **Tech**: Built from scratch using vanilla JS and **Chart.js** for visual inventory tracking.
 

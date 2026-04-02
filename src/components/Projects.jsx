@@ -38,7 +38,7 @@ const Projects = () => {
       insights: 'Consolidated 10+ messy sheets into 3 executive views.',
       icon: <Layers size={22} className="text-purple-400" />,
       color: 'purple',
-      github: 'https://github.com/Rohitkr2002',
+      github: 'https://github.com/Rohitkr2002/HR-Dashboard',
     },
     {
       title: 'SQL Retail Analytics Engine',
@@ -58,7 +58,7 @@ const Projects = () => {
       insights: 'Deployed on GitHub Pages — live recruiter-ready demo.',
       icon: <Code2 size={22} className="text-red-400" />,
       color: 'red',
-      github: 'https://github.com/Rohitkr2002',
+      github: 'https://rohitkr2002.github.io/Blood-Bank-Management-Font-End-Project-/',
     },
   ];
 
