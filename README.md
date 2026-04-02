@@ -41,7 +41,7 @@
 
 ## 🛠️ Featured Masterpieces
 
-### 🤖 **Naukri Job AI Agent** (Full Automation)
+### 🤖 [Naukri Job AI Agent](https://github.com/Rohitkr2002/Naukri.com-AI-Agent-) (Full Automation)
 > *The intersection of Web Scraping, AI Scoring, and Hands-free Automation.*
 - **The Challenge**: Manual job searching for 0-1 yr roles was slow and repetitive.
 - **The Solution**: Built a Python agent using **BeautifulSoup** to scrape Naukri.com, **Gemini AI** to score jobs against my resume, and **SMTP** to email daily curated reports.

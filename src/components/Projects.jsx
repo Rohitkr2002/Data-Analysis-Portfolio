@@ -14,7 +14,7 @@ const Projects = () => {
       { label: 'Match Accuracy', value: '85%' },
     ],
     icon: <Sparkles size={28} className="text-indigo-300" />,
-    github: 'https://github.com/Rohitkr2002',
+    github: 'https://github.com/Rohitkr2002/Naukri.com-AI-Agent-',
     gradient: 'from-indigo-500/20 via-purple-500/10 to-transparent',
     border: 'border-indigo-500/30',
   };
