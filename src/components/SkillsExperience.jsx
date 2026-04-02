@@ -6,6 +6,8 @@ import googleCert from '../assets/certifications/google_data.png';
 import pythonCert from '../assets/certifications/python_data.png';
 import sqlCert from '../assets/certifications/sql_data.png';
 import reactCert from '../assets/certifications/react_data.png';
+import powerbiCert from '../assets/certifications/power_bi_data.png';
+import excelCert from '../assets/certifications/excel_data.png';
 
 const SkillsExperience = () => {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -24,6 +26,8 @@ const SkillsExperience = () => {
     { name: 'Python for Data Science',        org: 'IBM / Coursera',         icon: '🐍', color: 'text-indigo-400',  image: pythonCert },
     { name: 'SQL for Data Analysis',          org: 'Mode Analytics',         icon: '🗄️', color: 'text-purple-400',  image: sqlCert    },
     { name: 'React — The Complete Guide',     org: 'Udemy / Maximilian S.',   icon: '⚛️', color: 'text-emerald-400', image: reactCert   },
+    { name: 'Power BI Data Visualization',    org: 'Microsoft / Coursera',   icon: '📊', color: 'text-yellow-400',  image: powerbiCert },
+    { name: 'Advanced Excel Analytics',       org: 'PwC / Coursera',         icon: '📋', color: 'text-emerald-400', image: excelCert   },
   ];
 
   const experience = [
