@@ -1,16 +1,45 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { Send, Mail, Linkedin, Github, MapPin, Clock, CheckCircle, MessageSquare, Phone } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSending(true);
+    setError(false);
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject || 'Portfolio Inquiry',
+      message: formData.message,
+      to_name: 'Rohit Kumar Singh',
+    };
+
+    emailjs.send(
+      'service_qj4i41z',
+      'template_zbaar5j',
+      templateParams,
+      'MgnUUvBHKEl7skZtf'
+    )
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setSubmitted(true);
+      setIsSending(false);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSubmitted(false), 5000);
+    })
+    .catch((err) => {
+      console.error('FAILED...', err);
+      setIsSending(false);
+      setError(true);
+    });
   };
 
   const contactCards = [
@@ -244,11 +273,21 @@ const Contact = () => {
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-                  className="w-full btn-gradient py-4 rounded-2xl flex items-center justify-center gap-2 font-bold text-base"
+                  disabled={isSending}
+                  whileHover={{ scale: isSending ? 1 : 1.02 }} whileTap={{ scale: isSending ? 1 : 0.98 }}
+                  className={`w-full btn-gradient py-4 rounded-2xl flex items-center justify-center gap-2 font-bold text-base ${isSending ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  Send Message <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+                  {isSending ? (
+                    <>Sending Message...</>
+                  ) : (
+                    <>Send Message <Send size={18} className="group-hover:translate-x-1 transition-transform" /></>
+                  )}
                 </motion.button>
+                {error && (
+                   <p className="text-center text-red-500 text-xs font-bold mt-2">
+                     Something went wrong. Please try again or email me directly!
+                   </p>
+                )}
               </form>
             )}
           </motion.div>
