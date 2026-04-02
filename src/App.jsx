@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Linkedin, Github } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StatsSection from './components/StatsSection';
@@ -76,6 +77,22 @@ function App() {
   return (
     <div className="relative bg-dark min-h-screen text-slate-200 selection:bg-sky-500/30 overflow-x-hidden">
       <MouseGlow />
+
+      {/* Global Social Sidebar (Fixed to Viewport) */}
+      <motion.div 
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="fixed left-6 2xl:left-12 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-6 z-50 py-6 px-3 bg-white/5 border border-white/10 backdrop-blur-xl rounded-full"
+      >
+        <a href="https://www.linkedin.com/in/rohit-kumar-singh-25168a226/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-sky-400 transition-colors p-2 hover:bg-sky-400/10 rounded-full">
+           <Linkedin size={20} />
+        </a>
+        <a href="https://github.com/Rohitkr2002" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full">
+           <Github size={20} />
+        </a>
+        <div className="h-20 w-px bg-gradient-to-b from-sky-400/50 to-transparent mx-auto" />
+      </motion.div>
       
       <AnimatePresence mode="wait">
         {loading && <Loader key="loader" />}
