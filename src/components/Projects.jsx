@@ -14,7 +14,7 @@ const Projects = () => {
       { label: 'Match Accuracy', value: '85%' },
     ],
     icon: <Sparkles size={28} className="text-indigo-300" />,
-    github: 'https://github.com/Rohitkr2002/Naukri.com-AI-Agent',
+    github: 'https://github.com/Rohitkr2002/Naukri.com-AI-Agent-',
     gradient: 'from-indigo-500/20 via-purple-500/10 to-transparent',
     border: 'border-indigo-500/30',
   };
@@ -58,7 +58,7 @@ const Projects = () => {
       insights: 'Deployed on GitHub Pages — live recruiter-ready demo.',
       icon: <Code2 size={22} className="text-red-400" />,
       color: 'red',
-      github: 'https://rohitkr2002.github.io/Blood-Bank-Management-Font-End-Project-/',
+      github: 'https://github.com/Rohitkr2002/Blood-Bank-Management-Font-End-Project-',
     },
   ];
 
