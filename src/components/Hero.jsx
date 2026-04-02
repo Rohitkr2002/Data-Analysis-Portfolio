@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { MousePointer2, MoveRight, Download, Linkedin, Github, MapPin, GraduationCap, Target, Award, Clock, ArrowDown, Database, Code2 } from 'lucide-react';
+import { MousePointer2, MoveRight, Download, Linkedin, Github, MapPin, GraduationCap, Target, Award, Clock, ArrowDown, Database, Code2, ShieldCheck, Zap, Activity } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   const [text] = useTypewriter({
@@ -26,12 +27,19 @@ const Hero = () => {
     { icon: '🐍', x: '80%', y: '65%', delay: 3, color: 'text-indigo-400' },
   ];
 
+  const badges = [
+    { label: 'React Architect', icon: <Zap size={12} />, color: 'sky' },
+    { label: 'Data Storyteller', icon: <Activity size={12} />, color: 'indigo' },
+    { label: 'Python Automation', icon: <ShieldCheck size={12} />, color: 'purple' },
+  ];
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 pb-32 overflow-x-hidden mesh-grid">
       {/* Background Gradients */}
       <div className="absolute top-0 -left-10 w-full h-full bg-gradient-to-b from-sky-500/5 via-dark to-dark pointer-events-none" />
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-sky-500/10 blur-[130px] pointer-events-none rounded-full" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-500/10 blur-[130px] pointer-events-none rounded-full" />
+      <div className="absolute inset-0 data-mesh opacity-20 pointer-events-none" />
 
       {/* Floating Skill Orbit Icons */}
       {floatingIcons.map((item, i) => (
@@ -60,6 +68,9 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-sky-500"></span>
             </span>
             Exploring New Horizons • Available for Internships / Jobs
+            <span className="ml-3 pl-3 border-l border-white/10 text-slate-500 font-bold tracking-widest lowercase">
+              ping: 24ms
+            </span>
           </motion.div>
 
           {/* Intro Text */}
@@ -73,10 +84,36 @@ const Hero = () => {
           </motion.p>
 
           {/* Name & Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-black tracking-tighter mb-4">
-            <span className="text-white drop-shadow-2xl">Rohit Kumar</span><br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-500 animate-gradient-x">Singh</span>
-          </h1>
+          <div className="flex flex-col-reverse md:flex-row md:items-center gap-6 mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-display font-black tracking-tighter">
+              <span className="text-white drop-shadow-2xl">Rohit Kumar</span><br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-500 animate-gradient-x">Singh</span>
+            </h1>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="relative shrink-0"
+            >
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-full blur opacity-25"></div>
+              <img src={profileImg} alt="Rohit" className="relative h-20 w-20 md:h-28 md:w-28 rounded-full object-cover border-2 border-white/20 shadow-2xl" />
+            </motion.div>
+          </div>
+
+          {/* Achievement Badges Row */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.25 }}
+            className="flex flex-wrap gap-3 mb-8"
+          >
+            {badges.map(b => (
+              <div key={b.label} className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-slate-300">
+                <span className={`text-${b.color}-400`}>{b.icon}</span>
+                {b.label}
+              </div>
+            ))}
+          </motion.div>
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-6 text-slate-200">
             Professional <span className="text-transparent-gradient">{text}</span>
@@ -185,7 +222,7 @@ const Hero = () => {
         <motion.div 
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="glass-card p-6 -rotate-2 shadow-2xl min-w-[220px] border-indigo-400/20"
+          className="glass-card p-6 -rotate-2 shadow-2xl min-w-[240px] border-indigo-400/20 bg-indigo-500/5"
         >
           <div className="flex items-center gap-4 mb-4">
             <div className="p-3 bg-indigo-400/20 rounded-2xl text-indigo-400">
@@ -193,15 +230,23 @@ const Hero = () => {
             </div>
             <div>
               <p className="text-[10px] text-slate-400 uppercase font-black tracking-widest">Analytics</p>
-              <p className="font-bold text-sm">Data Scientist</p>
+              <p className="font-bold text-sm text-white">Insight Engine</p>
             </div>
           </div>
-          <div className="flex gap-1.5 h-10 items-end">
-             <div className="w-3 h-4 bg-indigo-400/30 rounded-t-sm" />
-             <div className="w-3 h-8 bg-indigo-400/50 rounded-t-sm" />
-             <div className="w-3 h-10 bg-indigo-400 rounded-t-sm" />
-             <div className="w-3 h-7 bg-indigo-400/70 rounded-t-sm" />
-             <div className="w-3 h-9 bg-indigo-400/90 rounded-t-sm" />
+          <div className="flex gap-2 h-12 items-end px-1">
+             {[40, 70, 100, 60, 90, 50].map((h, i) => (
+               <motion.div 
+                 key={i}
+                 initial={{ height: 0 }}
+                 animate={{ height: `${h}%` }}
+                 transition={{ delay: i * 0.1, duration: 1 }}
+                 className="w-full bg-gradient-to-t from-indigo-500/20 to-indigo-400 rounded-t-sm" 
+               />
+             ))}
+          </div>
+          <div className="mt-3 flex justify-between items-center text-[8px] font-bold text-slate-500 uppercase tracking-tighter">
+             <span>Accuracy: 98%</span>
+             <span className="text-emerald-400">Processing...</span>
           </div>
         </motion.div>
       </div>
