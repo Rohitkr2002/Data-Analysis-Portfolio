@@ -104,4 +104,5 @@ Currently looking for **Remote Internships** and **Graduate Roles (2025)**.
 ---
 
 <!-- Search Keywords -->
-**Tags:** `hr-dashboard` `power-bi` `data-analysis` `dax` `power-query` `hr-analytics` `attrition-analysis` `business-intelligence` `data-visualization` `excel` `sql` `python` `portfolio-project` `rohit-kumar-singh`
+**Tags:** `Protfolio` `Data-Analysis-Portfolio` `hr-dashboard` `power-bi` `data-analysis` `dax` `power-query` `hr-analytics` `attrition-analysis` `business-intelligence` `data-visualization` `excel` `sql` `python` `portfolio-project` `rohit-kumar-singh`
+
